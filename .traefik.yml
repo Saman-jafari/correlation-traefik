@@ -1,0 +1,9 @@
+displayName: Correlation ID UUID-7
+type: middleware
+
+import: github.com/saman-jafari/correlation-id-traefik
+
+summary: 'Traefik middleware plugin which adds Correlation Id with UUID 7 unix timestamp based uuid to the given Header if given header not exists'
+
+testData:
+  headerName: "X-CORRELATION-ID"
