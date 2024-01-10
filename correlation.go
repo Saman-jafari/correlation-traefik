@@ -1,4 +1,4 @@
-package correlation_traefik
+package correlation_id_traefik
 
 import (
 	"context"

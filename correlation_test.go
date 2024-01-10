@@ -1,4 +1,4 @@
-package correlation_traefik_test
+package correlation_id_traefik_test
 
 import (
 	"context"
@@ -9,13 +9,13 @@ import (
 )
 
 func TestDemo(t *testing.T) {
-	cfg := correlation_traefik.CreateConfig()
+	cfg := correlation_id_traefik.CreateConfig()
 	cfg.HeaderName = "correlation-id"
 
 	ctx := context.Background()
 	next := http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {})
 
-	handler, err := correlation_traefik.New(ctx, next, cfg, "plugin")
+	handler, err := correlation_id_traefik.New(ctx, next, cfg, "plugin")
 	if err != nil {
 		t.Fatal(err)
 	}
